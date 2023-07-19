@@ -6,7 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import tn.idrm.receiptconstructor.ReceiptconstructordbApp;
 import tn.idrm.receiptconstructor.config.AsyncSyncConfiguration;
 import tn.idrm.receiptconstructor.config.EmbeddedSQL;
 
