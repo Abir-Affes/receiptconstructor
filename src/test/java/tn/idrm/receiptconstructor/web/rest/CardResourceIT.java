@@ -261,8 +261,6 @@ class CardResourceIT {
         Card partialUpdatedCard = new Card();
         partialUpdatedCard.setId(card.getId());
 
-        partialUpdatedCard.type(UPDATED_TYPE);
-
         restCardMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, partialUpdatedCard.getId())
@@ -275,7 +273,7 @@ class CardResourceIT {
         List<Card> cardList = cardRepository.findAll();
         assertThat(cardList).hasSize(databaseSizeBeforeUpdate);
         Card testCard = cardList.get(cardList.size() - 1);
-        assertThat(testCard.getType()).isEqualTo(UPDATED_TYPE);
+        assertThat(testCard.getType()).isEqualTo(DEFAULT_TYPE);
     }
 
     @Test
